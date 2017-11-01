@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/feeditem"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true" android:layout_centerInParent="true"
+    android:layout_centerVertical="true" android:layout_gravity="center"
+    android:layout_marginStart="8dp" android:layout_marginTop="24dp" android:gravity="center">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/avatar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerVertical="true"
+        android:background="@color/transparent"
+        android:src="@drawable/common_google_signin_btn_icon_dark_normal"
+    />
+    <com.ayteksokmen.langner.View.TextViewPlus
+        android:id="@+id/person_name"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="false"
+        android:layout_centerInParent="true"
+        android:layout_toEndOf="@+id/gender"
+        android:layout_toRightOf="@+id/gender"
+        android:background="@drawable/transparentbg"
+        android:gravity="center"
+        android:padding="@dimen/app_padding_tiny" android:textColor="@android:color/white"
+        android:textSize="@dimen/app_text_size_small"
+        app:customFont="Exo-Regular.otf" tools:text="Aytek Sökmen"/>
+
+</RelativeLayout>

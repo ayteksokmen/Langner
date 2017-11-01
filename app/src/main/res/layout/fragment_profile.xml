@@ -1,0 +1,185 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+>
+
+    <RelativeLayout
+        android:id="@+id/profile_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_grey">
+
+        <RelativeLayout
+            android:id="@+id/header_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_grey" android:gravity="center"
+            android:paddingBottom="10dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="false"
+                android:layout_gravity="center"
+                android:background="@color/transparent"
+                android:padding="10dp"
+                app:civ_border_color="@color/colorPrimaryDark"
+                app:civ_border_width="2dp"
+                tools:src="@drawable/common_google_signin_btn_icon_dark_normal"/>
+
+
+            <com.ayteksokmen.langner.View.TextViewPlus
+                android:id="@+id/profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profile_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_between_items_small"
+                android:textSize="@dimen/app_text_size_huge"
+                app:customFont="Exo-Bold.otf" tools:text="Aytek Sökmen"/>
+
+            <com.ayteksokmen.langner.View.TextViewPlus
+                android:id="@+id/ageandfrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profile_name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_between_items_small"
+                android:textSize="@dimen/app_text_size_big"
+                app:customFont="Exo-Regular.otf" tools:text="23, Turkey"/>
+
+            <com.ayteksokmen.langner.View.TextViewPlus
+                android:id="@+id/languages"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ageandfrom"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_between_items_small"
+                android:textSize="@dimen/app_text_size_big"
+                app:customFont="Exo-Regular.otf"
+                tools:text="Türkçe konuşuyor, İngilizce öğreniyor."/>
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/buttons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:layout_below="@+id/header_container"
+            android:orientation="horizontal">
+            <android.support.v7.widget.CardView android:id="@+id/settings"
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_below="@+id/header_container"
+                                                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                                                android:layout_marginEnd="@dimen/margin_between_items_big"
+                                                android:layout_marginStart="@dimen/margin_between_items_big"
+                                                android:layout_marginTop="@dimen/activity_vertical_margin"
+                                                android:layout_weight="1"
+                                                android:elevation="9dp">
+                <com.ayteksokmen.langner.View.TextViewPlus
+                    android:id="@+id/settingsText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/app_padding_small"
+                    app:customFont="Exo-Regular.otf" tools:text="Arkadaş Ekle"/>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView android:id="@+id/message"
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_below="@+id/header_container"
+                                                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                                                android:layout_marginEnd="@dimen/margin_between_items_big"
+                                                android:layout_marginStart="@dimen/margin_between_items_big"
+                                                android:layout_marginTop="@dimen/activity_vertical_margin"
+                                                android:layout_weight="1"
+                                                android:visibility="gone">
+                <com.ayteksokmen.langner.View.TextViewPlus
+                    android:id="@+id/messageText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/app_padding_small"
+                    android:text="@string/message"
+                    app:customFont="Exo-Regular.otf"/>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView android:id="@+id/aboutMe"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_below="@+id/buttons"
+                                            android:layout_marginBottom="@dimen/margin_between_items_small"
+                                            android:layout_marginEnd="@dimen/margin_between_items_big"
+                                            android:layout_marginStart="@dimen/margin_between_items_big"
+                                            android:layout_marginTop="@dimen/margin_between_items_small"
+                                            android:elevation="9dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" android:orientation="vertical">
+                        <com.ayteksokmen.langner.View.TextViewPlus
+                            android:id="@+id/aboutMeTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="false"
+                            android:layout_weight="1"
+                            android:padding="@dimen/app_padding_small"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/app_text_size_big"
+                            app:customFont="Exo-Bold.otf" tools:text="Hakkımda"/>
+                        <TextView
+                            android:id="@+id/line2"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                            android:layout_marginStart="@dimen/app_padding_small"
+                            android:layout_weight="1"
+                            android:background="#ebebeb"/>
+
+                        <com.ayteksokmen.langner.View.TextViewPlus
+                            android:id="@+id/aboutText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="false"
+                            android:layout_marginTop="@dimen/margin_between_items_small"
+                            android:layout_weight="1"
+                            android:padding="@dimen/margin_between_items_small"
+                            android:textColor="@color/grey_500"
+                            android:textSize="@dimen/app_text_size_big"
+                            app:customFont="Exo-Regular.otf"
+                            tools:text="Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek değişmeden elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum pasajları da içeren Letraset yapraklarının yayınlanması ile ve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren masaüstü yayıncılık yazılımları ile popüler olmuştur."/>
+                    </LinearLayout>
+                    <com.ayteksokmen.langner.View.TextViewPlus
+                        android:id="@+id/textViewPlus"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="false"
+                        android:layout_marginEnd="@dimen/activity_vertical_margin"
+                        android:layout_marginTop="@dimen/margin_between_items_small"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="Düzenle"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/app_text_size_big"
+                        android:visibility="gone" app:customFont="Exo-Bold.otf"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+
+    </RelativeLayout>
+</ScrollView>

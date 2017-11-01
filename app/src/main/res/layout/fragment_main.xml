@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/relative"
+                android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:orientation="vertical" android:weightSum="3">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="8dp" android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.ayteksokmen.langner.View.TextViewPlus
+                    android:id="@+id/lastMeetTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="false"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="8dp"
+                    android:text="Son Konuşmalarım"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/app_text_size_big"
+                    app:customFont="Exo-Bold.otf"/>
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginEnd="@dimen/app_padding_small"
+                    android:layout_marginStart="@dimen/app_padding_small"
+                    android:layout_weight="1"
+                    android:background="#ebebeb"/>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/lastMeet"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:padding="4dp">
+                </android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="8dp" android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <com.ayteksokmen.langner.View.TextViewPlus
+                    android:id="@+id/friendsTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="false"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="8dp"
+                    android:text="Son Zamanlarda Çevrimiçi Olanlar"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/app_text_size_big"
+                    app:customFont="Exo-Bold.otf"/>
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginEnd="@dimen/app_padding_small"
+                    android:layout_marginStart="@dimen/app_padding_small"
+                    android:layout_weight="1"
+                    android:background="#ebebeb"/>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/friends"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp">
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="8dp" android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.ayteksokmen.langner.View.TextViewPlus
+                    android:id="@+id/nearMeTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="false"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="8dp"
+                    android:text="Yakınımdaki Kişiler"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/app_text_size_big"
+                    app:customFont="Exo-Bold.otf"/>
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginEnd="@dimen/app_padding_small"
+                    android:layout_marginStart="@dimen/app_padding_small"
+                    android:layout_weight="1"
+                    android:background="#ebebeb"/>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/nearMe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp">
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/userPage"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:layout_margin="36dp" android:visibility="gone">
+
+    </FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "142870184622",
+    "firebase_url": "https://langner-6685f.firebaseio.com",
+    "project_id": "langner-6685f",
+    "storage_bucket": "langner-6685f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:142870184622:android:a1700501b615a60f",
+        "android_client_info": {
+          "package_name": "com.sokmen.langner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "142870184622-lnntv29o39vcmvtbk4jss52kdk7q5nhd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBP8hQZirLWVO4068mvF1erCsIAoOddwyc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

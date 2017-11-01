@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                 xmlns:tools="http://schemas.android.com/tools"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="match_parent"
+                                                 android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="right">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?attr/colorPrimaryDark"
+                    app:title="@string/app_name" android:paddingRight="16dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="false"
+                    app:titleMarginStart="72dp">
+
+            </android.support.v7.widget.Toolbar>
+            <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/circleImageView"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="top|left"
+                        android:background="@color/transparent"
+                        android:padding="10dp"
+                        android:src="@drawable/profile"
+                        app:civ_border_color="@color/colorPrimaryDark"
+                        app:civ_border_width="2dp" android:layout_weight="1" android:layout_alignParentRight="false"
+                        android:layout_alignParentEnd="false" android:layout_marginStart="56dp"/>
+            </FrameLayout>
+
+        </RelativeLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <FrameLayout
+            android:id="@+id/frame_layout_content_chat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <ProgressBar
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBar" android:layout_gravity="center"/>
+    </FrameLayout>
+
+</android.support.design.widget.CoordinatorLayout>

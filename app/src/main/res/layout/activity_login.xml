@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/back"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+    <!-- Login progress -->
+
+    <RelativeLayout
+        android:id="@+id/splash"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="252dp"
+            android:layout_height="185dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="48dp"
+            android:padding="24dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/translation"/>
+
+        <TextView
+            android:id="@+id/signUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" android:padding="10dp"
+            android:text="Üye Ol" android:textColor="#fff" android:textSize="18sp"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_below="@+id/logo"
+            android:layout_centerHorizontal="true" android:layout_centerInParent="false"
+            android:orientation="vertical">
+            <RelativeLayout android:id="@+id/facebookLoginCard"
+                            android:layout_width="140dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1" android:background="@drawable/face_button"
+                            android:visibility="gone">
+                <com.facebook.login.widget.LoginButton
+                    android:id="@+id/faceLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/googleLoginCard"
+                            android:layout_width="140dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="24dp"
+                            android:layout_weight="1" android:background="@drawable/google_bttn"
+                            android:visibility="gone">
+                <com.google.android.gms.common.SignInButton
+                    android:id="@+id/sign_in_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"/>
+</RelativeLayout>

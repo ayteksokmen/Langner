@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/padding_small"
+                android:paddingEnd="@dimen/padding_avg"
+                android:paddingStart="@dimen/padding_avg"
+                android:paddingTop="@dimen/padding_small">
+
+    <TextView
+            android:id="@+id/text_view_chat_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/chat_receive_rounded_rect_bg"
+            android:padding="@dimen/padding_small"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="?attr/colorPrimaryDark"
+            android:paddingLeft="16dp"
+            android:layout_centerVertical="true"
+            tools:text="selam adad dadsad ada dsadsad adsaddadsadsad dsdadsdad"
+            android:layout_toRightOf="@+id/imageView3" android:layout_marginEnd="@dimen/margin_huge"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/mr_media_play_dark"
+            android:id="@+id/imageView3"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="-17.5dp"
+            android:tint="@color/theme_light_grey"
+            android:layout_centerVertical="false"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="-11dp" android:rotation="180"/>
+    <ImageView
+            android:id="@+id/user_photo"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/circle_background"
+            android:gravity="center"
+            android:maxEms="1"
+            android:visibility="gone"/>
+
+</RelativeLayout>
